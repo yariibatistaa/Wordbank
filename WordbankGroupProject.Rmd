@@ -1,0 +1,22 @@
+---
+title: "Wordbank Data"
+author: "Yari Batista"
+date: "3/15/2020"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+```{r libraries}
+library(wordbankr)
+library(tidyverse)
+```
+
+```{r data set setup}
+get_administration_data()
+data <- get_administration_data() %>%
+  select(1, 2, 3, 4, 7, 8, 12)
+```
+
